@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://atc-backend-api.vercel.app/";
 
 export const api = {
   getBeverages: () => axios.get(`${API_URL}/beverages`),
