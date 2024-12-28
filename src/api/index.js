@@ -1,11 +1,17 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api";
+const API = axios.create({
+  baseURL: "https://anytime-chai-backend.vercel.app/api",
+  withCredentials: true, // Enable cookies or authentication headers if required
+  headers: {
+    "Content-Type": "application/json", // Ensure JSON content type
+  },
+});
 
 export const api = {
-  getBeverages: () => axios.get(`${API_URL}/beverages`),
-  getResources: () => axios.get(`${API_URL}/resources`),
-  createOrder: (orderData) => axios.post(`${API_URL}/orders`, orderData),
-  updateResource: (id, data) => axios.patch(`${API_URL}/resources/${id}`, data),
-  updateOrderStatus: (id, statusData) => axios.patch(`${API_URL}/orders/${id}`, statusData), // Add this
+  getBeverages: () => API.get("/beverages"),
+  getResources: () => API.get("/resources"),
+  createOrder: (orderData) => API.post("/orders", orderData),
+  updateResource: (id, data) => API.patch(`/resources/${id}`, data),
+  updateOrderStatus: (id, statusData) => API.patch(`/orders/${id}`, statusData), // Add this
 };
