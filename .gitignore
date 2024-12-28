@@ -1,1 +1,33 @@
-node_modules
+# Ignore node_modules folder
+anytime-chai-backend/node_modules
+coffee-machine/node_modules
+
+# Ignore log files
+*.log
+
+# Ignore environment variables
+.env
+
+# Ignore build output
+dist/
+build/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# Ignore coverage reports
+coverage/
+
+# Ignore dependency directories
+bower_components/
+jspm_packages/
+
+# Ignore temporary files
+*.tmp
+*.swp
