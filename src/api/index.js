@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://anytime-chai-backend.vercel.app/";
+const API_URL = "https://anytime-chai-backend.vercel.app/api";
 
 export const api = {
   getBeverages: () => axios.get(`${API_URL}/beverages`),
